@@ -66,7 +66,8 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
 
 
 //        holder.iv.setImageResource(R.mipmap.ic_launcher);
-
+        ObjectAnimator fadeInOut = ObjectAnimator.ofFloat(holder.iv, "scaleY", 1f, 0f, 1f);
+        fadeInOut.start();
         //用过Picasso框架对图片处理并显示到iv上
         //用with()方法初始化，,
         Glide.with(context)
